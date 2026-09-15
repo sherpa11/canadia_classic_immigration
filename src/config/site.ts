@@ -28,6 +28,12 @@ export const siteConfig = {
     officeHours: "Mon - Fri: 9:00 AM - 5:00 PM MST",
     whatsappNumber: "12504673671",
   },
+  license: {
+    number: "R1056153",
+    designation: "RCIC-IRB",
+    label: "License (RCIC-IRB) #R1056153",
+    organization: "College of Immigration and Citizenship Consultants (CICC)"
+  },
   urls: {
     consultation: "https://calendly.com/placeholder-cci", // placeholder
   },

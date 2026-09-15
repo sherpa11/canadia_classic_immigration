@@ -29,14 +29,22 @@ export default function AboutPage() {
           style={{ backgroundImage: "url('https://images.unsplash.com/photo-1517935706615-2717063c2225?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')" }}
         />
         <div className="container mx-auto px-6 md:px-12 text-center relative z-10 max-w-4xl">
-          <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/15 mb-4 text-accent-gold text-xs font-semibold uppercase tracking-widest">
-            About {siteConfig.shortName}
-          </span>
+          {/* Top Badges with License */}
+          <div className="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3 mb-5">
+            <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-accent-gold text-xs font-semibold uppercase tracking-widest">
+              About {siteConfig.shortName}
+            </span>
+            <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-emerald-500/15 backdrop-blur-md border border-emerald-400/30 text-emerald-300 text-xs font-bold tracking-wide shadow-xs">
+              <ShieldCheck size={14} className="text-emerald-400 shrink-0" />
+              RCIC-IRB License #R1056153
+            </span>
+          </div>
+
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading mb-6 text-white font-bold leading-tight">
             Ethical Guidance. Transparent Process. Dedicated Support.
           </h1>
           <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto font-light leading-relaxed">
-            A trusted Canadian immigration consultancy dedicated to crafting clear, personalized pathways for individuals, families, and professionals worldwide.
+            A regulated Canadian immigration consultancy dedicated to crafting clear, personalized pathways for individuals, families, and professionals worldwide.
           </p>
         </div>
       </div>
@@ -167,8 +175,11 @@ export default function AboutPage() {
                 <h4 className="font-heading font-bold text-xl text-primary-black">
                   Principal Consultant
                 </h4>
-                <p className="text-xs text-primary-red font-semibold uppercase tracking-wider">
-                  Canadian Classic Immigration
+                <p className="text-xs font-bold text-primary-red uppercase tracking-wider mt-1">
+                  RCIC-IRB License #R1056153
+                </p>
+                <p className="text-[11px] text-gray-500 font-medium">
+                  College of Immigration & Citizenship Consultants (CICC)
                 </p>
               </div>
 

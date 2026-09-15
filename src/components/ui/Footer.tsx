@@ -40,9 +40,12 @@ export default function Footer() {
                 </span>
               </div>
             </Link>
-            <p className="text-gray-400 text-sm leading-relaxed mb-6">
-              Helping you navigate your journey to Canada with clarity and confidence.
+            <p className="text-gray-400 text-sm leading-relaxed mb-4">
+              Helping you navigate your journey to Canada with clarity, transparency, and confidence.
             </p>
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-emerald-400 text-xs font-semibold mb-6">
+              <span>RCIC-IRB #R1056153</span>
+            </div>
             <div className="flex space-x-4">
               <a href={siteConfig.socialLinks.instagram} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors" aria-label="Instagram">
                 <InstagramIcon />
