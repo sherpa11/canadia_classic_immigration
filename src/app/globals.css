@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-red: #C62828;
+  --color-primary-burgundy: #8E1B1B;
+  --color-primary-charcoal: #171717;
+  --color-primary-black: #111111;
+  
+  --color-bg-offwhite: #FAFAF7;
+  --color-bg-warmwhite: #F5F3EE;
+  --color-bg-lightgray: #E9E9E6;
+  
+  --color-accent-gold: #C9A86A;
+  
+  --font-heading: var(--font-playfair);
+  --font-body: var(--font-inter);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-bg-offwhite text-primary-charcoal font-body antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading text-primary-black;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
