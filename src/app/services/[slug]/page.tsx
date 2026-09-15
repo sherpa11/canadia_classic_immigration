@@ -42,10 +42,15 @@ export default async function ServiceDetailPage({ params }: PageProps) {
           style={{ backgroundImage: "url('https://images.unsplash.com/photo-1517935706615-2717063c2225?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')" }}
         />
         <div className="container mx-auto px-6 md:px-12 relative z-10 text-center max-w-4xl">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 mb-6 text-accent-gold text-xs font-semibold uppercase tracking-widest">
-            Canadian Immigration Program
+          <div className="flex flex-wrap items-center justify-center gap-2.5 mb-6">
+            <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-accent-gold text-xs font-semibold uppercase tracking-widest">
+              {service.category}
+            </span>
+            <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-primary-red/20 backdrop-blur-md border border-primary-red/30 text-white text-xs font-bold uppercase tracking-wider">
+              Fee: {service.price}
+            </span>
           </div>
-          <h1 style={{ color: "white" }} className="font-heading text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight" >
+          <h1 style={{ color: "white" }} className="font-heading text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight">
             {service.title}
           </h1>
           <p className="text-lg sm:text-xl text-gray-200 max-w-2xl mx-auto font-light leading-relaxed">
@@ -58,7 +63,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
               rel="noopener noreferrer"
               className="px-8 py-3.5 bg-gradient-to-r from-primary-red to-primary-burgundy text-white rounded-full font-bold hover:shadow-lg hover:shadow-primary-red/30 transition-all duration-300"
             >
-              Book a Consultation for {service.title}
+              Book a Consultation ({service.price})
             </Link>
           </div>
         </div>

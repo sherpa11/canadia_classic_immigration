@@ -17,34 +17,34 @@ export default function FeaturedService() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <span style={{ color: "white" }} >
-                Permanent Residency
+              <span className="inline-block text-xs font-bold uppercase tracking-widest text-primary-red mb-3">
+                Permanent Residency Pathways
               </span>
               <h2 className="text-4xl md:text-5xl font-heading leading-tight mb-6">
                 Build Your Long-Term Future in Canada.
               </h2>
               <p className="text-gray-600 text-lg mb-8 leading-relaxed">
-                Whether through Express Entry, Provincial Nominee Programs, or other specialized PR pathways, we provide the strategic guidance needed to secure your permanent status in Canada.
+                Whether through Express Entry, Provincial Nominee Programs (PNP), or specialized regional pilots, we provide the strategic guidance needed to secure your permanent status in Canada.
               </p>
               <ul className="space-y-4 mb-10 text-gray-700 font-medium">
                 <li className="flex items-center gap-3">
-                  <div className="w-1.5 h-1.5 rounded-full bg-primary-red"></div>
-                  Express Entry (FSW, CEC, FST)
+                  <div className="w-2 h-2 rounded-full bg-primary-red"></div>
+                  <span>Express Entry ($2,000 and up)</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <div className="w-1.5 h-1.5 rounded-full bg-primary-red"></div>
-                  Provincial Nominee Programs (PNP)
+                  <div className="w-2 h-2 rounded-full bg-primary-red"></div>
+                  <span>Provincial Nominee Programs ($2,200 and up)</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <div className="w-1.5 h-1.5 rounded-full bg-primary-red"></div>
-                  Family Class Sponsorship
+                  <div className="w-2 h-2 rounded-full bg-primary-red"></div>
+                  <span>Family Class Sponsorship ($2,500 and up)</span>
                 </li>
               </ul>
               <Link 
-                href="/services/permanent-residency"
-                className="group inline-flex items-center gap-2 px-8 py-4 bg-primary-black text-white rounded font-semibold hover:bg-primary-red transition-all duration-300"
+                href="/services/express-entry"
+                className="group inline-flex items-center gap-2 px-8 py-4 bg-primary-black text-white rounded-full font-semibold hover:bg-primary-red transition-all duration-300 shadow-sm"
               >
-                Explore PR Options
+                Explore PR Pathways
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </Link>
             </motion.div>
