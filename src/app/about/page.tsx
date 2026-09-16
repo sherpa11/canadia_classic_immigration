@@ -1,5 +1,5 @@
 import { siteConfig } from "@/config/site";
-import cciOwner from "@/components/home/cci owner.png";
+import cciOwner from "./cci owner.png";
 import ConsultationCTA from "@/components/home/ConsultationCTA";
 import { Metadata } from "next";
 import { 
@@ -169,7 +169,7 @@ export default function AboutPage() {
                 <div className="w-40 h-40 sm:w-48 sm:h-48 mx-auto rounded-full overflow-hidden border-4 border-white shadow-lg mb-4">
                   <img
                     src={cciOwner.src}
-                    alt="Immigration Consultation"
+                    alt="CCI Owner"
                     className="w-full h-full object-cover"
                   />
                 </div>
