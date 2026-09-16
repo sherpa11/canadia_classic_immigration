@@ -210,14 +210,6 @@ export const siteConfig = {
       date: "Recent Approval"
     },
     {
-      name: "Amina Al-Mansoor",
-      location: "Edmonton, AB",
-      program: "Study Permit & PGWP Transition",
-      quote: "From obtaining my initial Canadian study permit to successfully filing my Post-Graduation Work Permit, their guidance has been outstanding. They truly treat you like family, not just a case number.",
-      rating: 5,
-      date: "Recent Approval"
-    },
-    {
       name: "Rajesh & Kavita Sharma",
       location: "Surrey, BC",
       program: "Federal Skilled Worker (Express Entry)",
