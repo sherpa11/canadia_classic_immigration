@@ -35,7 +35,7 @@ export const siteConfig = {
     organization: "College of Immigration and Citizenship Consultants (CICC)"
   },
   urls: {
-    consultation: "https://calendly.com/placeholder-cci", // placeholder
+    consultation: "https://app.acuityscheduling.com/schedule.php?owner=40403390", 
   },
   socialLinks: {
     instagram: "https://instagram.com/canadianclassic",
