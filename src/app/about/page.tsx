@@ -174,7 +174,7 @@ export default function AboutPage() {
                   />
                 </div>
                 <h4 className="font-heading font-bold text-xl text-primary-black">
-                  Principal Consultant
+                  Ramanjot Singh
                 </h4>
                 <p className="text-xs font-bold text-primary-red uppercase tracking-wider mt-1">
                   RCIC-IRB License #R1056153
