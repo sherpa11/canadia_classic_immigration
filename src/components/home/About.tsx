@@ -74,7 +74,7 @@ export default function About() {
           >
             <div className="rounded-3xl overflow-hidden aspect-[4/5] relative shadow-lg">
               <img 
-                src="public/cci owner.png" 
+                src="/cci owner.png" 
                 alt="Immigration Consultation" 
                 className="w-full h-full object-cover"
               />
