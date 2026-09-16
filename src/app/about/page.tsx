@@ -179,9 +179,6 @@ export default function AboutPage() {
                 <p className="text-xs font-bold text-primary-red uppercase tracking-wider mt-1">
                   RCIC-IRB License #R1056153
                 </p>
-                <p className="text-[11px] text-gray-500 font-medium">
-                  College of Immigration & Citizenship Consultants (CICC)
-                </p>
               </div>
 
               <div className="lg:w-2/3 space-y-5 text-gray-700">
