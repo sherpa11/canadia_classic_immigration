@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import cciOwner from "./cci owner.png";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, ShieldCheck, Star } from "lucide-react";
 
@@ -74,9 +75,9 @@ export default function About() {
           >
             <div className="rounded-3xl overflow-hidden aspect-[4/5] relative shadow-lg">
               <img 
-                src="/cci owner.png" 
-                alt="Immigration Consultation" 
-                className="w-full h-full object-cover"
+                  src={cciOwner.src}
+                  alt="Immigration Consultation" 
+                  className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary-black/60 via-transparent to-transparent"></div>
             </div>
