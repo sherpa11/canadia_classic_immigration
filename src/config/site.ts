@@ -38,7 +38,7 @@ export const siteConfig = {
     consultation: "https://app.acuityscheduling.com/schedule.php?owner=40403390", 
   },
   socialLinks: {
-    instagram: "https://instagram.com/canadianclassic",
+    instagram: "https://www.instagram.com/canadian_classic_immigration?stkn=MTlmemh3bzg0ZmJ6aA==",
     facebook: "https://facebook.com/canadianclassic",
     linkedin: "https://linkedin.com/company/canadianclassic",
     whatsapp: "https://wa.me/12504673671"
