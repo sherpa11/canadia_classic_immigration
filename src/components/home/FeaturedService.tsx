@@ -53,7 +53,7 @@ export default function FeaturedService() {
           </div>
           
           {/* Image */}
-          <div className="w-full lg:w-1/2 h-[1000px] lg:h-[650px] order-1 lg:order-2 relative">
+          <div className="w-full lg:w-1/2 h-[650px] lg:h-[500px] order-1 lg:order-2 relative">
             <Image
               src={cityView}
               alt="Canada city view"
