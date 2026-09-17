@@ -39,8 +39,8 @@ export const siteConfig = {
   },
   socialLinks: {
     instagram: "https://www.instagram.com/canadian_classic_immigration?stkn=MTlmemh3bzg0ZmJ6aA==",
-    facebook: "https://facebook.com/canadianclassic",
-    linkedin: "https://linkedin.com/company/canadianclassic",
+    facebook: "",
+    linkedin: "",
     whatsapp: "https://wa.me/12504673671"
   },
   services: [
