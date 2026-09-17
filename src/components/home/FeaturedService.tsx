@@ -3,6 +3,8 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
+import cityView from "./city view.jpg";
 
 export default function FeaturedService() {
   return (
@@ -52,10 +54,10 @@ export default function FeaturedService() {
           
           {/* Image */}
           <div className="w-full lg:w-1/2 h-[400px] lg:h-[600px] order-1 lg:order-2 relative">
-            <img 
-              src="https://images.unsplash.com/photo-1503899036084-c55cdd92da26?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
-              alt="Canada Permanent Residency"
-              className="w-full h-full object-cover"
+            <Image
+              src={cityView}
+              alt="Canada city view"
+              className="w-full h-64 object-cover"
             />
           </div>
         </div>
