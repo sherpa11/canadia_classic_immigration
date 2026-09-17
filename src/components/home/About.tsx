@@ -81,39 +81,6 @@ export default function About() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary-black/60 via-transparent to-transparent"></div>
             </div>
-            
-            {/* Floating Trust Card 1: Review Score */}
-            <motion.div 
-              initial={{ y: 20, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.3, duration: 0.6 }}
-              className="absolute -top-6 -right-4 sm:-right-8 bg-white p-5 rounded-2xl shadow-xl border border-gray-100 flex items-center gap-3.5"
-            >
-              <div className="w-11 h-11 rounded-xl bg-amber-50 flex items-center justify-center text-accent-gold">
-                <Star size={22} className="fill-accent-gold" />
-              </div>
-              <div>
-                <div className="font-heading font-bold text-lg text-primary-black leading-none mb-1">4.9 / 5.0</div>
-                <div className="text-xs text-gray-500">Verified Client Rating</div>
-              </div>
-            </motion.div>
-
-            {/* Floating Trust Card 2: Transparency */}
-            <motion.div 
-              initial={{ y: 20, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.5, duration: 0.6 }}
-              className="absolute -bottom-8 -left-4 sm:-left-8 bg-white p-6 rounded-2xl shadow-xl max-w-[280px] border border-gray-100"
-            >
-              <div className="flex items-center gap-2 mb-2 text-primary-red">
-                <ShieldCheck size={20} />
-                <span className="text-xs font-bold uppercase tracking-wider">Transparent Fees</span>
-              </div>
-              <h3 className="font-heading text-lg font-bold mb-1 text-primary-black leading-snug">Personalized Roadmaps</h3>
-              <p className="text-xs text-gray-500">No false promises. Just honest, results-oriented guidance.</p>
-            </motion.div>
           </motion.div>
         </div>
       </div>
