@@ -10,9 +10,9 @@ export default function FeaturedService() {
   return (
     <section className="py-24 bg-white overflow-hidden">
       <div className="container mx-auto px-6 md:px-12">
-        <div className="flex flex-col lg:flex-row items-center bg-bg-warmwhite rounded-3xl overflow-hidden shadow-sm">
+        <div className="flex flex-col lg:flex-row items-stretch bg-bg-warmwhite rounded-3xl overflow-hidden shadow-sm">
           {/* Content */}
-          <div className="w-full lg:w-1/2 p-12 lg:p-20 order-2 lg:order-1">
+          <div className="w-full lg:w-1/2 p-8 sm:p-12 lg:p-16 xl:p-20 order-2 lg:order-1 flex flex-col justify-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -22,10 +22,10 @@ export default function FeaturedService() {
               <span className="inline-block text-xs font-bold uppercase tracking-widest text-primary-red mb-3">
                 Permanent Residency Pathways
               </span>
-              <h2 className="text-4xl md:text-5xl font-heading leading-tight mb-6">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading leading-tight mb-6">
                 Build Your Long-Term Future in Canada.
               </h2>
-              <p className="text-gray-600 text-lg mb-8 leading-relaxed">
+              <p className="text-gray-600 text-base sm:text-lg mb-8 leading-relaxed">
                 Whether through Express Entry, Provincial Nominee Programs (PNP), or specialized regional pilots, we provide the strategic guidance needed to secure your permanent status in Canada.
               </p>
               <ul className="space-y-4 mb-10 text-gray-700 font-medium">
@@ -53,11 +53,13 @@ export default function FeaturedService() {
           </div>
           
           {/* Image */}
-          <div className="w-full lg:w-1/2 h-[650px] lg:h-[500px] order-1 lg:order-2 relative">
+          <div className="w-full lg:w-1/2 min-h-[320px] sm:min-h-[400px] lg:min-h-full relative order-1 lg:order-2">
             <Image
               src={cityView}
               alt="Canada city view"
-              className="w-full h-64 object-cover"
+              fill
+              className="object-cover object-center"
+              sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </div>
         </div>
