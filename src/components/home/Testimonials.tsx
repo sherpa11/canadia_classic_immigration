@@ -73,9 +73,6 @@ export default function Testimonials() {
                     <h4 className="font-heading font-bold text-lg sm:text-xl text-primary-black">
                       {current.name}
                     </h4>
-                    <span className="inline-flex items-center gap-1 text-[11px] font-semibold bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded-full border border-emerald-200">
-                      <CheckCircle2 size={12} className="text-emerald-600" /> Verified Case
-                    </span>
                   </div>
 
                   <div className="flex flex-wrap items-center justify-center gap-2 text-xs sm:text-sm text-gray-500">
