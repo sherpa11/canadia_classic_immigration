@@ -7,14 +7,57 @@ import { motion } from "framer-motion";
 
 export default function ContactPage() {
   const [formStatus, setFormStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    service: "",
+    message: "",
+  });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
+  ) => {
+    setFormData((prev) => ({
+      ...prev,
+      [e.target.id]: e.target.value,
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setFormStatus("submitting");
-    // Simulate API call
-    setTimeout(() => {
-      setFormStatus("success");
-    }, 1500);
+    setErrorMessage("");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        setFormStatus("success");
+        setFormData({
+          name: "",
+          phone: "",
+          email: "",
+          service: "",
+          message: "",
+        });
+      } else {
+        setFormStatus("error");
+        setErrorMessage(data.error || "Failed to send your enquiry. Please try again.");
+      }
+    } catch {
+      setFormStatus("error");
+      setErrorMessage("Network error occurred. Please check your connection or contact us directly.");
+    }
   };
 
   return (
@@ -115,7 +158,10 @@ export default function ContactPage() {
                   Thank you for reaching out. A member of our team will get back to you shortly.
                 </p>
                 <button 
-                  onClick={() => setFormStatus("idle")}
+                  onClick={() => {
+                    setFormStatus("idle");
+                    setErrorMessage("");
+                  }}
                   className="mt-6 px-6 py-2.5 bg-white border border-green-300 rounded-full font-semibold text-sm text-green-800 hover:bg-green-100/50 shadow-sm transition-all"
                 >
                   Send another message
@@ -123,6 +169,12 @@ export default function ContactPage() {
               </motion.div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6 relative z-10">
+                {formStatus === "error" && errorMessage && (
+                  <div className="p-4 rounded-xl bg-red-50 border border-red-200 text-red-700 text-sm">
+                    {errorMessage}
+                  </div>
+                )}
+
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div className="space-y-1.5">
                     <label htmlFor="name" className="text-xs sm:text-sm font-semibold text-gray-700 block">Full Name</label>
@@ -130,6 +182,8 @@ export default function ContactPage() {
                       type="text" 
                       id="name" 
                       required
+                      value={formData.name}
+                      onChange={handleChange}
                       className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary-red focus:ring-2 focus:ring-primary-red/20 outline-none transition-all bg-gray-50/50 focus:bg-white text-sm"
                       placeholder="John Doe"
                     />
@@ -140,6 +194,8 @@ export default function ContactPage() {
                       type="tel" 
                       id="phone" 
                       required
+                      value={formData.phone}
+                      onChange={handleChange}
                       className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary-red focus:ring-2 focus:ring-primary-red/20 outline-none transition-all bg-gray-50/50 focus:bg-white text-sm"
                       placeholder="+1 (555) 000-0000"
                     />
@@ -153,6 +209,8 @@ export default function ContactPage() {
                       type="email" 
                       id="email" 
                       required
+                      value={formData.email}
+                      onChange={handleChange}
                       className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary-red focus:ring-2 focus:ring-primary-red/20 outline-none transition-all bg-gray-50/50 focus:bg-white text-sm"
                       placeholder="john@example.com"
                     />
@@ -162,7 +220,8 @@ export default function ContactPage() {
                     <select 
                       id="service" 
                       required
-                      defaultValue=""
+                      value={formData.service}
+                      onChange={handleChange}
                       className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary-red focus:ring-2 focus:ring-primary-red/20 outline-none transition-all bg-gray-50/50 focus:bg-white appearance-none text-sm"
                     >
                       <option value="" disabled>Select a service...</option>
@@ -178,8 +237,10 @@ export default function ContactPage() {
                   <label htmlFor="message" className="text-xs sm:text-sm font-semibold text-gray-700 block">Your Message</label>
                   <textarea 
                     id="message" 
-                    rows={5}
+                    rows={5} 
                     required
+                    value={formData.message}
+                    onChange={handleChange}
                     className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary-red focus:ring-2 focus:ring-primary-red/20 outline-none transition-all bg-gray-50/50 focus:bg-white resize-y text-sm"
                     placeholder="Please tell us a bit about your situation and goals..."
                   ></textarea>
